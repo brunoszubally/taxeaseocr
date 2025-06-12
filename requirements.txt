@@ -1,0 +1,7 @@
+flask
+flask-cors
+openai
+azure-ai-formrecognizer
+python-dotenv
+requests
+gunicorn
