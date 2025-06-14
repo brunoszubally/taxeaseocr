@@ -131,6 +131,10 @@ def process_image_url():
             os.unlink(temp_file_path)
         return jsonify({'error': str(e)}), 500
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    return jsonify({"status": "ok", "message": "pong"}), 200
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
     app.run(host='0.0.0.0', port=port) 
